@@ -17,8 +17,8 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
 	host_id SERIAL NOT NULL REFERENCES host_info(id),
 	memory_free INTEGER NOT NULL,
 	cpu_idle INTEGER NOT NULL,
-	cpu_kernel INTEGER,
-	disk_io INTEGER,
+	cpu_kernel INTEGER NOT NULL,
+	disk_io INTEGER NOT NULL,
 	disk_available INTEGER NOT NULL
 
 );

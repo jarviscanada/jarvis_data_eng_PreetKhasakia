@@ -30,12 +30,10 @@ fi
     #Current time in `2019-11-26 14:40:19` UTC format
     timestamp=$(vmstat -t | awk '{print $18" "$19}' | xargs)
 
-    #PSQL command: Inserts server usage data into host_usage table
-    #Note: be careful with double and single quotes
+    #Inserts server usage data into host_usage table
     insert_stmt="INSERT INTO host_info(timestamp, total_mem, l2_cache, cpu_mhz, cpu_model, cpu_architecture, cpu_number, hostname) VALUES('$timestamp', '$total_mem', '$l2_cache', '$cpu_mhz', '$cpu_model', '$cpu_architecture', '$cpu_number', '$hostname');"
 
-    #set up env var for pql cmd
     export PGPASSWORD=$psql_password 
-    #Insert date into a database
+   
     psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
     exit $?
