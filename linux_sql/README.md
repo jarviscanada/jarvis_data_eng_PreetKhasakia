@@ -1,7 +1,7 @@
 # Linux Cluster Monitoring Agent
 
 # Introduction
-The Jarvis Linux Cluster agent is built for the purpose of managing and monitoring Linux cluster of nodes or servers running CentOS 7. The servers are connected via a switch which allows each node to communicate with each other through internal IPv4 addresses. The LCA team requires data collection of hardware specifications and memory usage (e.g. CPU/Memory) in real-time. 
+The Jarvis Linux Cluster agent is built for the purpose of managing and monitoring Linux cluster of nodes or servers running CentOS 7. The servers are connected via a switch to allow each node to communicate with each other through internal IPv4 addresses. The LCA team requires data collection of hardware specifications and memory usage (e.g. CPU/Memory) in real-time. 
 
 The design of this project consists of a psql instance using docker which is used to gather all data and is provisioned on our local machines. There is a bash agent that is installed on every node that would collect server usage data and inserts into the psql instance. 
 
