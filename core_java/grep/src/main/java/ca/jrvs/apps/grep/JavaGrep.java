@@ -7,7 +7,7 @@ import java.util.List;
 public interface JavaGrep {
     /**
      * Top level search worklflow
-     * @throws java.io.IOException
+     * @throws IOException
      */
     void process() throws IOException;
 
@@ -16,7 +16,7 @@ public interface JavaGrep {
      * @param rootDir input directory
      * @return files under the rootDir
      */
-    List<File> listFiles(String rootDir);
+    List<File> listFiles(String rootDir) throws IOException;
 
     /**
      * Read a file and return all the lines
@@ -28,7 +28,7 @@ public interface JavaGrep {
      * @throws IllegalArgumentException if a given inputFile is not a file
      */
 
-    List<String> readLines(File inputFile);
+    List<String> readLines(File inputFile) throws IOException;
 
     /**
      * check if a line contains the regex pattern (passed by user)

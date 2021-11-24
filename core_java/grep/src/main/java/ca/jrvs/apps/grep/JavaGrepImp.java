@@ -1,16 +1,10 @@
 package ca.jrvs.apps.grep;
-
 import org.apache.log4j.BasicConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class JavaGrepImp implements JavaGrep {
     final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
@@ -24,7 +18,6 @@ public class JavaGrepImp implements JavaGrep {
             throw new IllegalArgumentException("USAGE: JavaGrep regex rootPath outFile");
         }
 
-        //Use default logger config
         BasicConfigurator.configure();
 
         JavaGrepImp javaGrepImp = new JavaGrepImp();
@@ -40,9 +33,7 @@ public class JavaGrepImp implements JavaGrep {
     }
 
     @Override
-
-    public void process() {
-        //List<String> readLines = new ArrayList<>();
+    public void process() throws IOException {
         List<String> matchedLines = new ArrayList<>();
         List<File> files = listFiles(getRootPath());
 
@@ -55,54 +46,44 @@ public class JavaGrepImp implements JavaGrep {
         writeToFile(matchedLines);
     }
 
+
     @Override
     public List<File> listFiles(String rootDir) {
 
         File filePath = new File(rootDir);
-        List<File> files = new ArrayList<>();
-        try {
-            if(filePath.exists() || filePath.isDirectory()){
-                System.out.println("File or directory exists!");
-                files = Files.list(Paths.get(rootDir)).map(Path::toFile).collect(Collectors.toList());
-                
-                files.forEach(System.out::println);
-            }
-            
-            else {
-                System.out.println("File or directory does not exist!");
-            }
+        File[] f = filePath.listFiles();
+        List<File> fileList = new ArrayList<>();
 
-        }catch(Exception ex){
-            logger.error("Enter correct input path!", ex);
+        if(f == null) {
+            System.out.println("Empty");
+        }
+        if(f != null && f.length > 0) {
+            for (File file : f) {
+                if (file.isFile()) {
+                    fileList.add(file);
+                } else {
+                    fileList.addAll(listFiles(file.getAbsolutePath()));
+                }
+            }
         }
 
-
-        return files;
+        return fileList;
     }
 
     @Override
-    public List<String> readLines(File inputFile) throws IllegalArgumentException {
+    public List<String> readLines(File inputFile) throws IllegalArgumentException{
 
         List<String> result = new ArrayList<>();
         try{
-            if(inputFile.exists() && inputFile.isFile()){
-                BufferedReader br = new BufferedReader(new FileReader(inputFile));
+            BufferedReader br = new BufferedReader(new FileReader(inputFile));
+            String line;
+            while((line = br.readLine()) != null){
+                result.add(line);
+            }
+            br.close();
 
-                String line;
-                while((line = br.readLine()) != null){
-                    result.add(line);
-                }
-                br.close();
-            }
-            else{
-                System.out.println("File not found!");
-            }
-        } catch (IllegalArgumentException ex){
+        } catch (IOException ex){
             logger.error("Input file is not a file");
-        } catch (FileNotFoundException e) {
-            logger.error("Input file not found");
-        } catch (IOException e) {
-            logger.error("Input/Output error");
         }
 
         return result;
@@ -115,16 +96,11 @@ public class JavaGrepImp implements JavaGrep {
     }
 
     @Override
-    public void writeToFile(List<String> lines) {
+    public void writeToFile(List<String> lines) throws IOException {
 
-        try{
             BufferedWriter bw = new BufferedWriter(new FileWriter(getOutFile()));
             bw.write(String.valueOf(lines));
             bw.close();
-
-        }catch (Exception ex){
-            logger.error("Exception error");
-        }
 
     }
 
