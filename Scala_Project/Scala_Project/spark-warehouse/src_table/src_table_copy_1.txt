@@ -1,0 +1,5 @@
+fooString, 121312, 13113.21
+fooString, 121312, 13113.21
+fooString, 121312, 13113.21
+fooString, 121312, 13113.21
+fooString, 121312, 13113.21
