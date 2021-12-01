@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Setup and validate arguments
 psql_host=$1
 psql_port=$2
@@ -11,8 +13,7 @@ if [ "$#" -ne  5 ]; then
 	exit 1
 fi
 
-    #Save machine statistics in MB and current machine hostname to variables
-    
+        
     hostname=$(hostname -f)
     lscpu_out=$(lscpu)
 

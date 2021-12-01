@@ -27,15 +27,12 @@ create)
 	fi
 
 	#Create docker
-	#docker pull postgres
+	
 	docker volume create pgdata
-	#export PGPASSWORD='password'
 	docker run --name jrvs-psql -e POSTGRES_PASSWORD=$PGPASSWORD -d -v pgdata:/var/lib/postgresql/data -p 5432:5432 postgres:9.6-alpine
 
 	
-	#docker ps -f name=jrvs-psql
-	#sudo yum install -y postgresql
-	#psql -h localhost -U postgres -d postgres -W 
+	
 	exit$?
 	;;
 	
