@@ -30,7 +30,7 @@ jar -tf target/grep-1.0-SNAPSHOT.jar
 #Approach 2: Jar file
 java -cp target/grep-1.0-SNAPSHOT.jar ca.jrvs.apps.grep.JavaGrepImp .*Romeo.*Juliet.* ./data ./out/grep.txt
 ```
-#Implemenation
+# Implementation
 The implementation of the grep app starts by adding the correct maven dependencies/properties/plugins needed
 to configure the project within IntelliJ. Followed by, a 'JavaGrep.java' interface script which contains methods such as
 - process(): top level search workflow
