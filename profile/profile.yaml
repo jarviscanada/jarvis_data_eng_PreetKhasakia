@@ -1,7 +1,7 @@
 # Preferred name (Characters only)
 name: "Preet Khasakia"
 # Your GitHub repo root URL
-github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_demo
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_PreetKhasakia/
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
@@ -37,86 +37,49 @@ jarvis_projects:
   - name: "Cluster Monitor"
     git_url: "/linux_sql"
     
-    description: "Designed and implemented a linux cluster agent to preserve and monitor real-time data of nodes running on CentOS.
-        - Application performs real-time data collection of hardware specifications and CPU memory usage.
-        - Created a Data Definition Language (DDL) script to hold specified data into tables used in the database.
-        - Modified 'host_info.sh' and 'host_usage.sh' to retrieve the necessary and insert it to the database."
-  - name: "Core Java"
-    git_url: "/core_java"
-    description: "" 
-  - name: "Springboot App"
-    git_url: "/springboot"
-    description: ""
-  - name: "Python Data Analytics"
-    git_url: "/python_data_analytics"
-    description: ""
-  - name: "Hadoop"
-    git_url: "/hadoop"
-    description: ""
-  - name: "Spark"
-    git_url: "/spark"
-    description: ""
-  - name: "Cloud/DevOps"
-    git_url: "/cloud_devops"
-    description: ""
+    description: "Designed and implemented a linux cluster agent to preserve and monitor real-time data of nodes running on CentOS. Application performs real-time data collection of hardware specifications and CPU memory usage. Created a Data Definition Language (DDL) script to hold specified data into tables used in the database. Modified 'host_info.sh' and 'host_usage.sh' to retrieve the necessary and insert it to the database."
 
-# List of personal or academic projects
-# Feel free to add more projects
+  - name: "Core Java Apps"
+    git_url: "/core_java"
+    description: 
+        - "Grep App: Implemented a java application that mimics the Linux 'grep' command to search and retrieve matching strings from files. Technologies used for this project are Maven, Java, Docker as a deployment tool and IntelliJ IDE. Implementation of backend code uses Encapsulation along with an interface to provide a flexible and organized implementation of the application. Deployment is done by dockerizing the app which includes building an image locally, running the docker container and push the image onto Docker Hub for verification of the image." 
+        - "JDBC App: The JDBC application establishes a connection between the java Customer program to an RDBMS. The basic flow of the JDBC app follows a simple process of mounting the driver and creating a connection. From that connection comes executing SQL statements, and then commit/rollback and finally close the connection. The application consists of multiple java classes each with its own function of providing the methods and connections that allow the user to access database elements with SQL queries pre-defined within the Customer DAO class."
+
 highlighted_projects:
     #project name
-  - name: "Web app for resturant"
+  - name: "IOT Smart Home Security System"
     #URL is optional
-    git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
-  - name: "Machine Learning"
-    git_url:
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+    description: "Built and established all hardware components to achieve a fully functioning security system. Contributed to develop a security system application, allowing users to remotely control the system. Integrated Amazon Alexa that features a voice command capability to remotely arm/disarm the system."
+  - name: "PizzaRia Cloud Application"
+    description: "Implemented custom location markers of an embedded Google Maps to show different store locations of PizzaRia. Incorporated a class to handle user inputs of updated selections made by a user, stored via RDS database on AWS. Implemented an emailing service for users to show the receipt of their order with location and order summary." 
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
 #The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
 professional_experience:
   #Write your Jarvis role as a professional experience rather than training.
-  - title: "Software Developer"
+  - title: "Data Engineer"
     company: "Jarvis"
-    duration: "2020-present"
+    duration: "Oct 2021-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
-  - title: "Tutor"
-    company: "XYZ Company"
-    duration: "2019"
-    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
+    description: "Working in an agile workflow environment along side other engineers to manage and complete various software projects. Appointed as a team lead for a sprint session and conducted daily scrum meetings with my team of data engineers to stay updated and acknowledge everyones daily tasks. Completed project work through tickets and followed the Gitflow approach to allow senior developers to review the work on Github."
+  - title: "Software Packaging Assistant"
+    company: "Ontario Tech University"
+    duration: "April 2021 - August 2021"
+    description: "Revised existing software installation documents and acquired the latest versions of software and licensing compatible for the upcoming school year. Executed compatibility testing of vendor-supplied installations to validate applications on various Operating Systems. Resolved scripting errors, automation defects and compatibility issues to certify packaged software. Used SCCM to deploy applications for faculty and institution personnel."
 
 #List of edcuation
 education: 
-  - school_name: "XYZ university"
-    duration: "2012-2016"
-    degree: "Bachelor of Applied Sciences"
-    department: "Electrical and Computer Engineering"
-    # optional
-    awards_achievements: 
-      - "Scholarship"
-      - "Dean's List (2015, 2016): Ut enim ad minim veniam"
-      - "GPA: 3.8/4.0"
-  - school_name: "XYZ university"
-    duration: "2016-2018"
-    degree: "Master of Engineering"
+  - school_name: "Ontario Tech University"
+    duration: "September 2017 - April 2021"
+    degree: "Bachelor of Engineering, Software"
     department: "Electrical and Computer Engineering"
     awards_achievements: 
 
-#Optional section
 others:
-    #category
-  - title: "Certificates"
-    #list of items
-    bullets:
-      - "Udacity Machine Learning (2019)"
-  - title: "Awards"
-    bullets:
-      - "Winner"
   - title: "Activities/Hobbies"
     bullets:
-      - "Basketball player"
-      - "Competitive gaming"
-      - "Volunteer, ABC Food bank: Ut enim ad minim veniam"
+      - "Rookie barber"
+      - "Gym"
+      - "Basketball"

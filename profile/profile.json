@@ -1,93 +1,46 @@
 {
   "education": [
     {
-      "awards_achievements": [
-        "Scholarship",
-        "Dean's List (2015, 2016): Ut enim ad minim veniam",
-        "GPA: 3.8/4.0"
-      ],
-      "degree": "Bachelor of Applied Sciences",
-      "department": "Electrical and Computer Engineering",
-      "duration": "2012-2016",
-      "school_name": "XYZ university"
-    },
-    {
       "awards_achievements": null,
-      "degree": "Master of Engineering",
+      "degree": "Bachelor of Engineering, Software",
       "department": "Electrical and Computer Engineering",
-      "duration": "2016-2018",
-      "school_name": "XYZ university"
+      "duration": "September 2017 - April 2021",
+      "school_name": "Ontario Tech University"
     }
   ],
-  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_demo",
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_PreetKhasakia/",
   "highlighted_projects": [
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
-      "git_url": "https://github.com/jarviscanada/jarvis_profile_builder",
-      "name": "Web app for resturant"
+      "description": "Built and established all hardware components to achieve a fully functioning security system. Contributed to develop a security system application, allowing users to remotely control the system. Integrated Amazon Alexa that features a voice command capability to remotely arm/disarm the system.",
+      "name": "IOT Smart Home Security System"
     },
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
-      "git_url": null,
-      "name": "Machine Learning"
+      "description": "Implemented custom location markers of an embedded Google Maps to show different store locations of PizzaRia. Incorporated a class to handle user inputs of updated selections made by a user, stored via RDS database on AWS. Implemented an emailing service for users to show the receipt of their order with location and order summary.",
+      "name": "PizzaRia Cloud Application"
     }
   ],
   "jarvis_projects": [
     {
-      "description": "Designed and implemented a linux cluster agent to preserve and monitor real-time data of nodes running on CentOS. - Application performs real-time data collection of hardware specifications and CPU memory usage. - Created a Data Definition Language (DDL) script to hold specified data into tables used in the database. - Modified 'host_info.sh' and 'host_usage.sh' to retrieve the necessary and insert it to the database.",
+      "description": "Designed and implemented a linux cluster agent to preserve and monitor real-time data of nodes running on CentOS. Application performs real-time data collection of hardware specifications and CPU memory usage. Created a Data Definition Language (DDL) script to hold specified data into tables used in the database. Modified 'host_info.sh' and 'host_usage.sh' to retrieve the necessary and insert it to the database.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
     {
-      "description": "",
+      "description": [
+        "Grep App: Implemented a java application that mimics the Linux 'grep' command to search and retrieve matching strings from files. Technologies used for this project are Maven, Java, Docker as a deployment tool and IntelliJ IDE. Implementation of backend code uses Encapsulation along with an interface to provide a flexible and organized implementation of the application. Deployment is done by dockerizing the app which includes building an image locally, running the docker container and push the image onto Docker Hub for verification of the image.",
+        "JDBC App: The JDBC application establishes a connection between the java Customer program to an RDBMS. The basic flow of the JDBC app follows a simple process of mounting the driver and creating a connection. From that connection comes executing SQL statements, and then commit/rollback and finally close the connection. The application consists of multiple java classes each with its own function of providing the methods and connections that allow the user to access database elements with SQL queries pre-defined within the Customer DAO class."
+      ],
       "git_url": "/core_java",
-      "name": "Core Java"
-    },
-    {
-      "description": "",
-      "git_url": "/springboot",
-      "name": "Springboot App"
-    },
-    {
-      "description": "",
-      "git_url": "/python_data_analytics",
-      "name": "Python Data Analytics"
-    },
-    {
-      "description": "",
-      "git_url": "/hadoop",
-      "name": "Hadoop"
-    },
-    {
-      "description": "",
-      "git_url": "/spark",
-      "name": "Spark"
-    },
-    {
-      "description": "",
-      "git_url": "/cloud_devops",
-      "name": "Cloud/DevOps"
+      "name": "Core Java Apps"
     }
   ],
   "name": "Preet Khasakia",
   "others": [
     {
       "bullets": [
-        "Udacity Machine Learning (2019)"
-      ],
-      "title": "Certificates"
-    },
-    {
-      "bullets": [
-        "Winner"
-      ],
-      "title": "Awards"
-    },
-    {
-      "bullets": [
-        "Basketball player",
-        "Competitive gaming",
-        "Volunteer, ABC Food bank: Ut enim ad minim veniam"
+        "Rookie barber",
+        "Gym",
+        "Basketball"
       ],
       "title": "Activities/Hobbies"
     }
@@ -95,15 +48,15 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.",
-      "duration": "2020-present",
-      "title": "Software Developer"
+      "description": "Working in an agile workflow environment along side other engineers to manage and complete various software projects. Appointed as a team lead for a sprint session and conducted daily scrum meetings with my team of data engineers to stay updated and acknowledge everyones daily tasks. Completed project work through tickets and followed the Gitflow approach to allow senior developers to review the work on Github.",
+      "duration": "Oct 2021-present",
+      "title": "Data Engineer"
     },
     {
-      "company": "XYZ Company",
-      "description": "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.",
-      "duration": "2019",
-      "title": "Tutor"
+      "company": "Ontario Tech University",
+      "description": "Revised existing software installation documents and acquired the latest versions of software and licensing compatible for the upcoming school year. Executed compatibility testing of vendor-supplied installations to validate applications on various Operating Systems. Resolved scripting errors, automation defects and compatibility issues to certify packaged software. Used SCCM to deploy applications for faculty and institution personnel.",
+      "duration": "April 2021 - August 2021",
+      "title": "Software Packaging Assistant"
     }
   ],
   "skills": {
